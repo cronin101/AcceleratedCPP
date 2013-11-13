@@ -23,7 +23,7 @@ int main(const int argc, const char** argv) {
 
   sort(students.begin(), students.end(), compareName);
 
-  for (vector<Student_Info>::iterator it = students.begin(); it != students.end(); ++it) {
+  for (vector<Student_Info>::const_iterator it = students.begin(); it != students.end(); ++it) {
     Student_Info student = *it;
 
     string::size_type pad_length = max_name_len + 1 + student.name.size();
