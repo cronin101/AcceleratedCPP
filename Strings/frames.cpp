@@ -63,3 +63,21 @@ vector<string> vcat(const vector<string>& a, const vector<string>& b) {
     return ret;
 }
 
+vector<string> hcat(const vector<string>& a, const vector<string>& b) {
+    vector<string> ret;
+    str_size_t r_indent = width(a) + 1;
+
+    typedef vector<string>::const_iterator iter;
+    iter a_it = a.begin(), b_it = b.begin();
+    while (a_it != a.end() || b_it != b.end()) {
+        string line;
+
+        if (a_it != a.end()) line  = *(a_it++);
+        line += string(r_indent - line.size(), ' ');
+        if (b_it != b.end()) line += *(b_it++);
+
+        ret.push_back(line);
+    }
+    return ret;
+}
+

@@ -18,7 +18,16 @@ std::vector<std::string> frame(
 std::vector<std::string> split(const std::string&);
 
 // Given two vector<string>s, return the vertical concatenation of the lines
-std::vector<std::string> vcat(const std::vector<std::string>&, const std::vector<std::string>&);
+std::vector<std::string> vcat(
+    const std::vector<std::string>&,
+    const std::vector<std::string>&
+);
+
+// Given two vector<string>s, return the horizontal concatenation of the lines
+std::vector<std::string> hcat(
+    const std::vector<std::string>&,
+    const std::vector<std::string>&
+);
 
 #endif
 
