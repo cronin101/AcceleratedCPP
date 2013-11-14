@@ -48,7 +48,7 @@ vector<string> split(const string& s) {
         while (j != en && !isspace(s[j])) ++j;
 
         if (i != j) {
-            ret.push_back(s.substr(i, j - 1));
+            ret.push_back(s.substr(i, j - i));
             i = j;
         }
     }
