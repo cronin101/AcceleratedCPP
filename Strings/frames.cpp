@@ -1,4 +1,4 @@
-#include "frames.h"
+#include "frames.hpp"
 
 using namespace std;
 typedef string::size_type str_size_t;
@@ -55,3 +55,11 @@ vector<string> split(const string& s) {
 
     return ret;
 }
+
+vector<string> vcat(const vector<string>& a, const vector<string>& b) {
+    vector<string> ret = a;
+    ret.insert(ret.end(), b.begin(), b.end());
+
+    return ret;
+}
+
