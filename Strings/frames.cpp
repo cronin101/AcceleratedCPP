@@ -34,3 +34,24 @@ vector<string> frame(
 
     return ret;
 }
+
+vector<string> split(const string& s) {
+    vector<string> ret;
+
+    str_size_t en = s.size();
+
+    str_size_t i = 0;
+    while (i != en) {
+        while (i != en && isspace(s[i])) ++i;
+
+        str_size_t j = i;
+        while (j != en && !isspace(s[j])) ++j;
+
+        if (i != j) {
+            ret.push_back(s.substr(i, j - 1));
+            i = j;
+        }
+    }
+
+    return ret;
+}
