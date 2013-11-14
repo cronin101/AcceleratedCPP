@@ -9,9 +9,9 @@ std::string::size_type width(const std::vector<std::string>&);
 
 // Frame the vector<string> by surrounding in given char
 std::vector<std::string> frame(
-  const std::vector<std::string>& v,
-  const char c,
-  const int pad
+    const std::vector<std::string>& v,
+    const char c,
+    const int pad
 );
 
 #endif
